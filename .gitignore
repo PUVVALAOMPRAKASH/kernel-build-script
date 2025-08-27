@@ -1,0 +1,24 @@
+
+---
+
+### **3️⃣ .gitignore**
+(save this as `.gitignore`)  
+
+```gitignore
+# Ignore build outputs
+out/
+*.o
+*.ko
+*.img
+*.dtb
+*.dtbo
+*.zip
+*.gz
+*.log
+
+# Ignore editor/OS files
+*.swp
+*.swo
+*.DS_Store
+.idea/
+.vscode/
