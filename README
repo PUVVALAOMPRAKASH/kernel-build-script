@@ -1,34 +1,24 @@
-# 🚀 Kernel Build Script  
+Kernel Build Automation Script
 
-This repository contains a shell script to **compile an ARM64 Linux/Android kernel** using **Clang/LLVM**, package it with **AnyKernel3**, and generate a **signed flashable zip**.  
+A Bash-based automation project to compile and package Android/Linux kernels using Clang/LLVM or GCC.
+It automates cloning, configuration, compilation, and zip packaging via AnyKernel3, reducing manual build steps.
 
----
+🧩 Features
 
-## 📦 Requirements  
-Make sure you have the following before running the script:  
+One-command kernel build (via clone.sh and run.sh)
 
-- 🐧 **Linux build environment**  
-- ⚙️ **Clang/LLVM toolchain**  
-- 🛠️ **GCC ARM64 cross-compilers**  
-- 📦 **AnyKernel3**  
-- 🔑 **zipsigner-3.0.jar**  
+Supports both Clang and GCC toolchains
 
----
+Auto packaging using AnyKernel3
 
-## 🔧 Features  
-✔️ ARM64 cross-compilation  
-✔️ Uses Clang/LLVM toolchain  
-✔️ Automatic AnyKernel packaging  
-✔️ Automatic zip signing with `zipsigner`  
-✔️ Build time logging  
+Build logs and optional zip signing
 
----
+⚠️ Current Status
 
-## 🚀 Usage  
+Tested under WSL Ubuntu — full Clang builds fail due to linker incompatibility (libc.so.6 issue).
+A GCC version was added for partial builds and validation of the pipeline.
+Works fully on native Linux or VM setups.
 
-```bash
-# Make the script executable
-chmod +x run.sh  
+💡 Key Learning
 
-# Run the build script
-./run.sh
+Gained hands-on experience with kernel configuration, cross-compilers, build automation, and debugging environment-toolchain mismatches.
